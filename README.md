@@ -6,10 +6,12 @@ I love ergodox-ez's keyboard layout tool [Oryx](https://configure.ergodox-ez.com
 
 This tool is created so that you can still use the oryx layout tool but still input your own complex macros.
 
-I wanted to add macros that would be use for vim keystrokes so that I wouldn't have to upload/modify vimrc.
+I wanted to add macros that would be used for vim keystrokes so that I wouldn't have to upload/modify vimrc.
 
 
 ## Build and Usage Process
+note: for now this is only for linux or NIX base systems
+
 - docker image
 - oryx layout with macro identifiers
 - update the custom-mapping csv file

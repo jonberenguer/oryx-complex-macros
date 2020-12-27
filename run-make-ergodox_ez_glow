@@ -1,0 +1,9 @@
+#!/bin/env /bin/bash
+
+
+mkdir keyboards/ergodox_ez/glow/keymaps/personalized
+cp /mnt/shared/* keyboards/ergodox_ez/glow/keymaps/personalized/
+make ergodox_ez/glow:personalized
+mv ergodox_ez_glow_personalized.hex /mnt/shared/
+chown 1000:1000 /mnt/shared/ergodox_ez_glow_personalized.hex
+
