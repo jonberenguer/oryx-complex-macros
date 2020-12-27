@@ -10,10 +10,10 @@ I wanted to add macros that would be used for vim keystrokes so that I wouldn't 
 
 
 ## Overall Build and Usage Process
-Requires python3 and Docker
+Requires python3 and Docker.
 Note: For now this is only for linux base systems, pending windows testings
 
-Simply create a macro in oryx with an unique 4 key macro: MM11. The script will reference the custom-mapping.csv file to find and replace the macro identifiers.
+Simply create a macro in oryx with a unique 4 key macro: MM11. The script will reference the custom-mapping.csv file to find and replace the macro identifiers.
 
 - docker image, either build or download from github
 - establish oryx layout with macro identifiers
@@ -30,3 +30,8 @@ python app.py
 
 *pending more steps
 
+
+# Checklist
+- [ ] currently for alpha, numeric and space chars. need support for special chars
+- [ ] detailed print screen of steps
+- [ ] more steps for postfix for example macros with an enter at the end
