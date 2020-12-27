@@ -9,20 +9,24 @@ This tool is created so that you can still use the oryx layout tool but still in
 I wanted to add macros that would be used for vim keystrokes so that I wouldn't have to upload/modify vimrc.
 
 
-## Build and Usage Process
-Requires python3 and docker
-Note: for now this is only for linux or NIX base systems, pending windows testings
+## Overall Build and Usage Process
+Requires python3 and Docker
+Note: For now this is only for linux base systems, pending windows testings
 
-- docker image
-- oryx layout with macro identifiers
-- update the custom-mapping csv file
+Simply create a macro in oryx with an unique 4 key macro: MM11. The script will reference the custom-mapping.csv file to find and replace the macro identifiers.
+
+- docker image, either build or download from github
+- establish oryx layout with macro identifiers
+- use the app.py to create and update custom-mapping.csv
 - run firmware compiler
 
 
 ## Usage
+```
 git clone https://github.com/jonberenguer/oryx-complex-macros.git
 cd oryx-complex-macros
 python app.py
+```
 
 *pending more steps
 
