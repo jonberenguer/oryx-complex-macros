@@ -10,7 +10,8 @@ I wanted to add macros that would be used for vim keystrokes so that I wouldn't 
 
 
 ## Build and Usage Process
-note: for now this is only for linux or NIX base systems
+Requires python3 and docker
+Note: for now this is only for linux or NIX base systems, pending windows testings
 
 - docker image
 - oryx layout with macro identifiers
@@ -19,5 +20,9 @@ note: for now this is only for linux or NIX base systems
 
 
 ## Usage
+git clone https://github.com/jonberenguer/oryx-complex-macros.git
+cd oryx-complex-macros
+python app.py
 
+*pending more steps
 
