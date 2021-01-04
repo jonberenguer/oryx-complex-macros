@@ -54,7 +54,7 @@ def main():
     source_files = get_zsa_sources()
     print(source_files)
 
-    dest = path.join(wrkdir, "temp")
+    dest = path.join(wrkdir, "datasets")
     for sfile in source_files:
         #extract(sfile, dest)
         pass
