@@ -22,7 +22,7 @@ Simply create a macro in oryx with a unique 4 key macro: MM11. The script will r
 
 
 ## Usage
-Download docker container `docker pull jonberenguer/zsa-qmk` or build the container
+Download docker container `docker pull jonberenguer/zsa-qmk` or build the container using `build-container-image.sh` bash script
 
 Then clone the repository and run the app
 ```
