@@ -54,7 +54,7 @@ def main():
     source_files = get_zsa_sources()
     print(source_files)
 
-    dest = path.join(wrkdir, "datasets")
+    dest = path.join(wrkdir, "temp")
     for sfile in source_files:
         #extract(sfile, dest)
         pass
@@ -63,9 +63,6 @@ def main():
     new_mapping.update_keymap(csvmappingfile, keymap_files[0])
     new_mapping.post_fix(keymap_files[0])
     print(keymap_files[0])
-
-
-
 
 
 
