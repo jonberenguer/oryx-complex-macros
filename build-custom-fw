@@ -1,23 +1,39 @@
 #!/bin/env /bin/bash
 
+
+# troubleshooting commands for container
 #docker run --rm -it  --network none -v `pwd`:/mnt/shared manualbuild.localhost/zsa-qmk /bin/bash
 #docker run --rm -it  --network none -v `pwd`:/mnt/shared manualbuild.localhost/zsa-qmk bash /mnt/shared/run-make
 
+
+openwally () {
+	# wally directory must be including in path
+	wally &
+}
+
+
+buildfirmware () {
+	echo "building $1 firmware"
+	docker run --rm -it --network none \
+		-v `pwd`:/mnt/shared \
+		jonberenguer/zsa-qmk bash /mnt/shared/run-make-$1
+
+	openwally
+}
+
 case "$1" in
-	"ergodox")
-		echo "building ergodox firmware"
-		docker run --rm -it --network none \
-			-v `pwd`:/mnt/shared \
-			jonberenguer/zsa-qmk bash /mnt/shared/run-make-ergodox_ez
+	"ergodox_ez")
+		buildfirmware "ergodox_ez"
 		;;
-	"planck")
-		echo "building planck firmware"
-		docker run --rm -it --network none \
-			-v `pwd`:/mnt/shared \
-			jonberenguer/zsa-qmk bash /mnt/shared/run-make-planck_ez_glow
+	"ergodox_ez_glow")
+		buildfirmware "ergodox_ez_glow"
 		;;
-	*)	echo "selections: ergodox,planck" ;;
+	"planck_ez")
+		buildfirmware "planck_ez"
+		;;
+	"planck_ez_glow")
+		buildfirmware "planck_ez_glow"
+		;;
+	*)	echo "selections: ergodox_ez,ergodox_ez_glow,planck_ez,planck_ez_glow" ;;
 esac
 
-# wally dir must be included in PATH
-wally &

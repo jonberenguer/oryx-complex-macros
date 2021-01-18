@@ -43,7 +43,7 @@ def update_keymap(customcsv, keymapfile):
     for row in reader:
         escword = re.escape("{}".format(row[0]))
         keymaptxt = re.sub(r'.*' + escword + r'.*' , row[1], keymaptxt)
-        print("replaced: {}".format(row[0]))
+        #print("replaced: {}".format(row[0]))
 
     keymap.write_text(keymaptxt)
 

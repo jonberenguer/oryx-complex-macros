@@ -2,7 +2,7 @@
 
 
 mkdir keyboards/ergodox_ez/keymaps/personalized
-cp /mnt/shared/* keyboards/ergodox_ez/keymaps/personalized/
+cp /mnt/shared/temp/ergodox_ez_personalized_source/* keyboards/ergodox_ez/keymaps/personalized/
 make ergodox_ez:personalized
 mv ergodox_ez_personalized.hex /mnt/shared/
 chown 1000:1000 /mnt/shared/ergodox_ez_personalized.hex

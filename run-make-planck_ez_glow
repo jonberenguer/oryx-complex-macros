@@ -2,7 +2,7 @@
 
 
 mkdir keyboards/planck/ez/glow/keymaps/personalized
-cp /mnt/shared/* keyboards/planck/ez/glow/keymaps/personalized/
+cp /mnt/shared/temp/planck_ez_glow_personalized_source/* keyboards/planck/ez/glow/keymaps/personalized/
 make planck/ez/glow:personalized
 mv planck_ez_glow_personalized.bin /mnt/shared/
 chown 1000:1000 /mnt/shared/planck_ez_glow_personalized.bin

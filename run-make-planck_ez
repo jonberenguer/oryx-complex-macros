@@ -2,7 +2,7 @@
 
 
 mkdir keyboards/planck/ez/keymaps/personalized
-cp /mnt/shared/* keyboards/planck/ez/keymaps/personalized/
+cp /mnt/shared/temp/planck_ez_personalized_source/* keyboards/planck/ez/keymaps/personalized/
 make planck/ez:personalized
 mv planck_ez_personalized.bin /mnt/shared/
 chown 1000:1000 /mnt/shared/planck_ez_personalized.bin
